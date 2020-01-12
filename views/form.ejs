@@ -1,22 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>YelpCamp</title>
+<title>Form</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
-<style>
-/* Chrome, Safari, Edge, Opera */
-.rem::-webkit-outer-spin-button,
-.rem::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 1.5;
-}
-
-/* Firefox */
-.rem {
-  -moz-appearance:textfield;
-}
-</style>
 </head>
 <body>
 <body>
@@ -51,7 +38,7 @@
   <div class="form-row">
   	<div class="form-group col-md-6">
       	<label for="revenue"><b>Revenue</b></label>
-      	<input type="number" class="form-control rem" id="revenue" name = "revenue" placeholder = "eg. 500000" minlength="10" required>
+      	<input type="number" class="form-control rem" id="revenue" name = "revenue" placeholder = "eg. 500000" step="10000" required>
     </div>
     <div class="form-group col-md-6">
     	<label for="email"><b>Email</b></label>
