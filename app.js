@@ -32,9 +32,9 @@ app.post("/",function(req,res){
  	first_name: req.body.first_name,
  	last_name: req.body.last_name,
     dob: req.body.dob,
-	revenue: req.body.revenue,
+	sex: req.body.sex,
 	address: req.body.address,
-	phone: req.body.phone,
+	revenue: req.body.revenue,
 	email: req.body.email
  };
 	User.create(x,function(err,user){
