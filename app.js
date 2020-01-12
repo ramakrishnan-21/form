@@ -32,7 +32,7 @@ app.post("/",function(req,res){
  	first_name: req.body.first_name,
  	last_name: req.body.last_name,
     dob: req.body.dob,
-	sex: req.body.sex,
+	revenue: req.body.revenue,
 	address: req.body.address,
 	phone: req.body.phone,
 	email: req.body.email
