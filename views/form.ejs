@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>YelpCamp</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<style>
+/* Chrome, Safari, Edge, Opera */
+.rem::-webkit-outer-spin-button,
+.rem::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 1.5;
+}
+
+/* Firefox */
+.rem {
+  -moz-appearance:textfield;
+}
+</style>
+</head>
+<body>
+<body>
+<div style="width:30%; margin: 30px auto;">
+<form action = "/" method = "POST">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="first_name"><b>First Name</b></label>
+      <input type="text" class="form-control" id="first_name" name = "first_name" placeholder="eg. Ramar" required minlength="2" size="20">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="last_name"><b>Last Name</b></label>
+      <input type="text" class="form-control" id = "last_name" name = "last_name" placeholder = "eg.Krishnan" required minlength="1" size = "10">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="dob"><b>Date of birth</b></label>
+      <input type="date" class="form-control" id="dob" name = "dob" required>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="sex"><b>Sex</b></label>
+      <select id="sex" name = "sex" class="form-control">
+      	<option>Male</option>
+      	<option>Female</option>
+      	<option>N/A</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group col-lg-12">
+    <label for="address"><b>Address</b></label>
+    <input type="text" class="form-control" name = "address" id="address" placeholder="eg. 1234 Main St" required>
+  </div>
+  <div class="form-row">
+  	<div class="form-group col-md-6">
+      	<label for="phone"><b>Phone</b></label>
+      	<input type="number" class="form-control rem" id="phone" name = "phone" placeholder = "eg. 9812345612" minlength="10" size="10" required>
+    </div>
+    <div class="form-group col-md-6">
+    	<label for="email"><b>Email</b></label>
+    	<input type="email" class="form-control" id = "email" name = "email" placeholder = "eg. abc@gmail.com" required>
+    </div>
+  </div>
+  <button type= "submit" class="btn btn-outline-dark">Submit</button>
+ </form>
+</div>
+</body>
+</html>
+
+
