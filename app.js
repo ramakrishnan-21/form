@@ -5,12 +5,23 @@ app = express(),
 mongoose = require("mongoose");
 const CONNECTION_URL = process.env.MONGODB_URL || 'mongodb://localhost/form_user';
 const PORT = process.env.PORT || 3000;
-mongoose.Promise = global.Promise;
-mongoose.set('debug', true);
 app.use(bodyParser.urlencoded({ extended: false }))
 //Connecting to mongoDB
-mongoose.connect("mongodb://localhost/form_user",{useNewUrlParser: true,  useUnifiedTopology: true});
-
+//mongoose.connect("mongodb://localhost/form_user",{useNewUrlParser: true,  useUnifiedTopology: true});
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
+mongoose.set('useUnifiedTopology', true);
+ 
+mongoose.connect("mongodb+srv://ramakrishnan:Ramkri@01@cluster0-hdk17.mongodb.net/test?retryWrites=true&w=majority", {
+    useNewUrlParser: true, 
+    /* useUnifiedTopology: true */
+}).then(() => {
+    console.log("connect to DB!")
+ 
+}).catch(err => {
+    console.log("ERROR", err.message);
+});
 //Routes
 
 app.get("/",function(req,res){
